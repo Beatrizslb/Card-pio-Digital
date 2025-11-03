@@ -1,0 +1,48 @@
+@import url('global.css');
+.clientes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+    gap: 25px;
+    width: 90%;
+    margin: 30px auto;
+}
+.cliente-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.cliente-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+/* Imagem do cliente */
+.cliente-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Conteúdo dentro do card */
+.cliente-info {
+    padding: 15px 20px;
+}
+
+.cliente-info p {
+    margin: 6px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Nome em destaque */
+.cliente-info p strong {
+    color: #732E08;
+    font-weight: 600;
+}
+

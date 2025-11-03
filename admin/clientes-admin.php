@@ -9,6 +9,16 @@ $resultado = mysqli_query($conexao, $sql);
 
 if(mysqli_num_rows($resultado) > 0){
     while($dados = mysqli_fetch_array($resultado)){
+        // --- Exibir imagem ---
+        echo "<td>";
+        if(!empty($dados['imagem'])){
+            echo "<img src='uploads/clientes/".$dados['imagem']."' width='60' height='60' style='object-fit: cover; border-radius: 50%;'>";
+        } else {
+            echo "<img src='uploads/clientes/sem-foto.png' width='60' height='60' style='object-fit: cover; border-radius: 50%;'>";
+        }
+        echo "</td>";
+
+        // --- Exibir dados do cliente ---
         echo "Id: ".$dados['id']." | ";
         echo "Nome: ".$dados['cliente']." | ";
         echo "Cidade: ".$dados['cidade']." | ";

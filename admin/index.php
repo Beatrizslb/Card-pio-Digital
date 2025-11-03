@@ -24,7 +24,6 @@ include 'auth.php'; // Protege a página e inicia sessão
     <a href="index.php">Início</a>
     <a href="?pg=clientes-admin">Clientes</a>
     <a href="?pg=produtos-listar">Produtos</a>
-    <a href="?pg=contato-admin">Contatos</a>
     <a href="logout.php" class="logout">Sair</a>
 </nav>
 

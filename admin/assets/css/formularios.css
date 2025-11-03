@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+.formulario {
+    width: 400px;
+    margin: 80px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+.formulario h1, .formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #732E08;
+}
+.formulario label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+.formulario input[type="text"],
+.formulario input[type="file"],
+.formulario input[type="number"],
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+.formulario button, .formulario input[type="submit"] {
+    width: 100%;
+    background-color: #732E08;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.formulario button:hover, .formulario input[type="submit"]:hover {
+    background-color: #DAAA50;
+    color: #000;
+}
+.mensagem-sucesso {
+    color: green;
+    text-align: center;
+}
+.mensagem-erro {
+    color: red;
+    text-align: center;
+}

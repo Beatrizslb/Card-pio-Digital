@@ -70,33 +70,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<h2>Editar Produto</h2>
 
-<form method="post" enctype="multipart/form-data">
-    Nome: <input type="text" name="nome" value="<?= htmlspecialchars($produto['nome']) ?>" required><br><br>
 
-    Descrição: <textarea name="descricao"><?= htmlspecialchars($produto['descricao']) ?></textarea><br><br>
+<link rel="stylesheet" href="assets/css/formularios.css">
 
-    Preço: <input type="number" step="0.01" name="preco" value="<?= $produto['preco'] ?>" required><br><br>
+<div class="formulario">
+    <h2>Editar Produto</h2>
+    <form method="post" enctype="multipart/form-data">
+        <label>Nome:</label>
+        <input type="text" name="nome" value="<?= htmlspecialchars($produto['nome']) ?>" required><br><br>
 
-    Categoria:
-    <select name="categoria" required>
-        <?php
-        $categorias = ['Espetinhos', 'Bebidas', 'Petiscos', 'Caldinhos'];
-        foreach ($categorias as $cat) {
-            $selected = ($cat == $produto['categoria']) ? 'selected' : '';
-            echo "<option $selected>$cat</option>";
-        }
-        ?>
-    </select><br><br>
+        <label>Descrição:</label>
+        <textarea name="descricao"><?= htmlspecialchars($produto['descricao']) ?></textarea><br><br>
 
-    <?php if ($produto['imagem']): ?>
-        <p>Imagem atual:</p>
-        <img src="<?= $produto['imagem'] ?>" width="150" alt="Imagem do produto"><br><br>
-    <?php endif; ?>
+        <label>Preço:</label>
+        <input type="number" step="0.01" name="preco" value="<?= $produto['preco'] ?>" required><br><br>
 
-    <label>Trocar imagem:</label>
-    <input type="file" name="imagem" accept="image/*"><br><br>
+        <label>Categoria:</label>
+        <select name="categoria" required>
+            <?php
+            $categorias = ['Espetinhos', 'Bebidas', 'Petiscos', 'Caldinhos'];
+            foreach ($categorias as $cat) {
+                $selected = ($cat == $produto['categoria']) ? 'selected' : '';
+                echo "<option $selected>$cat</option>";
+            }
+            ?>
+        </select><br><br>
 
-    <button type="submit">Salvar Alterações</button>
-</form>
+        <?php if ($produto['imagem']): ?>
+            <p>Imagem atual:</p>
+            <img src="<?= $produto['imagem'] ?>" width="150" alt="Imagem do produto"><br><br>
+        <?php endif; ?>
+
+        <label>Trocar imagem:</label>
+        <input type="file" name="imagem" accept="image/*"><br><br>
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+</div>
+

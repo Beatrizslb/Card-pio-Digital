@@ -1,5 +1,5 @@
-<?php
-    echo "<h3>Rodapé do site</h3>";
-?>
+    <footer>
+        <p>&copy; <?= date("Y") ?> Ana Beatriz. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

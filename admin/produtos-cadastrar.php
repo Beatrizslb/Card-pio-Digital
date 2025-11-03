@@ -49,12 +49,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<h2>Cadastrar Produto</h2>
 
-<form method="post" enctype="multipart/form-data">
+
+<link rel="stylesheet" href="assets/css/formularios.css">
+
+<div class="formulario">
+    <h2>Cadastrar Produto</h2>
+    <form method="post" enctype="multipart/form-data">
     Nome: <input type="text" name="nome" required><br><br>
     Descrição: <textarea name="descricao"></textarea><br><br>
-    Preço: <input type="number" step="0.01" name="preco" required><br><br>
+    Preço: <input type="number" min="0.0" step="0.01" name="preco" required><br><br>
     Categoria:
     <select name="categoria" required>
         <option value="">Selecione</option>
@@ -68,3 +72,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <button type="submit">Salvar</button>
 </form>
+</div>
+

@@ -1,1 +1,103 @@
-# Card-pio-Digital
+# 🌵 Espetinho Sabor Sertanejo
+
+Bem-vindo(a) ao **Espetinho Sabor Sertanejo** — um cardápio digital desenvolvido com amor, tecnologia e o sabor da nossa cultura nordestina.  
+O projeto foi criado como parte de um trabalho acadêmico no curso de **Ciência da Computação**, com o objetivo de unir design, programação e gastronomia regional em uma aplicação funcional e atrativa.
+
+---
+
+## 🍢 Sobre o Projeto
+
+O **Espetinho Sabor Sertanejo** é um sistema de cardápio digital onde os clientes podem visualizar os produtos disponíveis, como espetinhos, caldinhos, petiscos e bebidas de um estabelecimento real.  
+A proposta é oferecer uma experiência moderna e simples para que o cliente conheça o cardápio antes mesmo de fazer o pedido.
+
+---
+
+## 💡 Funcionalidades
+
+- Visualização dos produtos por categoria (Espetinhos, Caldinhos, Petiscos e Bebidas)  
+- Cadastro, edição e exclusão de produtos e clientes *(área administrativa)*  
+- Exibição de clientes cadastrados em cards elegantes  
+- Mapa de localização do estabelecimento  
+- Layout totalmente responsivo  
+- Organização do projeto em **template (topo, menu, conteúdo e rodapé)**
+
+---
+
+## 🧱 Tecnologias Utilizadas
+
+| Tecnologia | Função |
+|-------------|--------|
+| **HTML5** | Estrutura das páginas |
+| **CSS3** | Estilização e layout responsivo |
+| **PHP** | Lógica de backend e integração com o banco de dados |
+| **MySQL** | Armazenamento das informações |
+| **JavaScript** | Interações básicas na interface |
+| **Git & GitHub** | Controle de versão e hospedagem do código |
+
+---
+
+## 🗺️ Estrutura do Projeto
+📦 Espetinho-Sabor-Sertanejo
+│
+├── 📁 admin/
+│   ├── 📁 assets/
+│   │   ├── 📁 css/
+│   │   │   ├── formulario.css
+│   │   │   ├── global.css
+│   │   │   └── login.css
+│   │   └── 📁 js/
+│   │
+│   ├── 📁 uploads/
+│   │   ├── 📁 clientes/
+│   │   ├── 📁 icons/
+│   │   └── 📁 produtos/
+│   │
+│   ├── .htaccess
+│   ├── auth.php
+│   ├── clientes-admin.php
+│   ├── clientes-altera-forms.php
+│   ├── clientes-altera.php
+│   ├── clientes-cadastro-forms.php
+│   ├── clientes-cadastro.php
+│   ├── clientes-excluir.php
+│   ├── config.inc.php
+│   ├── criar_admin.php   # executa apenas uma vez
+│   ├── dashboard.php
+│   ├── index.php
+│   ├── login.php
+│   ├── logout.php
+│   ├── produtos-cadastrar.php
+│   ├── produtos-editar.php
+│   ├── produtos-excluir.php
+│   ├── produtos-listar.php
+│   └── verifica-login.php
+│
+├── 📁 assets/
+│   ├── 📁 css/
+│   │   ├── clientes.css
+│   │   ├── global.css
+│   │   ├── produtos.css
+│   │   └── quem-somos.css
+│   └── 📁 img/
+│
+├── clientes.php
+├── conteudo.php
+├── faleconosco.php
+├── index.php
+├── menu.php
+├── produtos.php
+├── quem-somos.php
+├── rodape.php
+├── topo.php
+└── README.md
+
+## 🎓 Créditos
+
+Desenvolvido por **Ana Beatriz Linhares**  
+💻 Projeto acadêmico – Curso de **Ciência da Computação**  
+
+---
+
+## 📜 Licença
+
+Este projeto foi desenvolvido para fins **educacionais e demonstrativos**.

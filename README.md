@@ -37,6 +37,8 @@ A proposta é oferecer uma experiência moderna e simples para que o cliente con
 ---
 
 ## 🗺️ Estrutura do Projeto
+
+```bash
 📦 Espetinho-Sabor-Sertanejo
 │
 ├── 📁 admin/

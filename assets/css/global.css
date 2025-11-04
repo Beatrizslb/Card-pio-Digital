@@ -15,7 +15,7 @@ body {
 }
 
 main {
-    flex: 1; /* faz o main ocupar o espaço disponível, empurrando o footer para baixo */
+    flex: 1;
 }
 
 a{
@@ -125,7 +125,7 @@ p{
     border: 0;
 }
 
-/* Coluna de informações */
+
 .info-container {
     flex: 1 1 300px;
     display: flex;
@@ -133,7 +133,6 @@ p{
     gap: 20px;
 }
 
-/* Endereço e contato */
 .endereco-info, .contato-info {
     background-color: #fff;
     padding: 20px;

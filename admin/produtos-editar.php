@@ -3,7 +3,7 @@ require 'config.inc.php';
 
 $id = $_GET['id'] ?? 0;
 
-// Busca o produto atual
+
 $sql = "SELECT * FROM produtos WHERE id=?";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("i", $id);
@@ -16,7 +16,6 @@ if (!$produto) {
     exit;
 }
 
-// Se o formulário for enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'];
     $descricao = $_POST['descricao'];
@@ -24,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $categoria = $_POST['categoria'];
     $imagem = $produto['imagem']; // imagem atual, caso não seja trocada
 
-    // Upload da nova imagem (se enviada)
     if (!empty($_FILES['imagem']['name'])) {
         $pasta = 'uploads/produtos/';
         $nomeArquivo = basename($_FILES['imagem']['name']);
@@ -53,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // Atualiza os dados no banco
     $sql = "UPDATE produtos SET nome=?, descricao=?, preco=?, categoria=?, imagem=? WHERE id=?";
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param("ssdssi", $nome, $descricao, $preco, $categoria, $imagem, $id);
@@ -61,7 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     echo "<p style='color:green;'>✅ Produto atualizado com sucesso!</p>";
 
-    // Atualiza o produto após salvar
     $produto['nome'] = $nome;
     $produto['descricao'] = $descricao;
     $produto['preco'] = $preco;
@@ -69,8 +65,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $produto['imagem'] = $imagem;
 }
 ?>
-
-
 
 <link rel="stylesheet" href="assets/css/formularios.css">
 

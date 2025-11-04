@@ -1,6 +1,5 @@
 <section class="sobre">
     <div class="sobre-container">
-        <!-- Texto à esquerda -->
         <div class="sobre-texto">
             <h2>Bem-vindo ao Espetinho do Sabor!</h2>
             <p>
@@ -16,7 +15,6 @@
             </p>
         </div>
 
-        <!-- Imagem à direita -->
         <div class="sobre-imagem">
             <img src="assets/img/espetinho.jpg" alt="asinha de frango">
         </div>

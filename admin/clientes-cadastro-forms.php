@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $cidade = $_POST['cidade'];
     $estado = $_POST['estado'];
 
-    // diretório onde as imagens serão salvas
+    // diretorio onde as imagens serão salvas
     $pasta = "admin/uploads/clientes/";
     $imagem_nome = null;
 
@@ -32,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // monta o SQL incluindo a imagem
     $sql = "INSERT INTO clientes (cliente, cidade, estado, imagem) 
             VALUES ('$nome', '$cidade', '$estado', " . ($imagem_nome ? "'$imagem_nome'" : "NULL") . ")";
     $result = mysqli_query($conexao, $sql);

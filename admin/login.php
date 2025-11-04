@@ -8,8 +8,6 @@ session_start(); ?>
     <link rel="stylesheet" href="assets/css/login.css">
   </head>
   <body>
-    
-
     <div class="formulario">
       <form method="post" action="verifica_login.php">
         <h1>Login do Administrador</h1>
@@ -23,6 +21,5 @@ session_start(); ?>
     <?php if (isset($_GET['erro'])): ?>
       <p style="color:red;">Usuário ou senha incorretos!</p>
     <?php endif; ?>
-
   </body>
   </html>

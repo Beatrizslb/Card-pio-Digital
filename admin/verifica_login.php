@@ -10,7 +10,7 @@ if (!$usuario || !$senha) {
     exit;
 }
 
-// Busca o usuário no banco
+
 $sql = "SELECT * FROM admins WHERE usuario = ?";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $usuario);
@@ -26,7 +26,7 @@ if ($result->num_rows === 1) {
     }
 }
 
-// Se chegar aqui, login falhou
+
 header("Location: login.php?erro=1");
 exit;
 ?>

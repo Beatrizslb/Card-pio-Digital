@@ -1,5 +1,5 @@
 <?php
-include 'auth.php'; // Protege a página e inicia sessão
+include 'auth.php'; 
 ?>
 <!doctype html>
 <html lang="pt-br">

@@ -20,7 +20,7 @@ if(mysqli_num_rows($resultado) > 0){
         echo "</div>";
     }
 
-    echo "</div>"; // fecha clientes-grid
+    echo "</div>";
 } else {
     echo "<p class='mensagem-erro'>Nenhum cliente cadastrado</p>";
 }

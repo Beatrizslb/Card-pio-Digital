@@ -24,7 +24,6 @@ if(isset($_FILES['imagem']) && $_FILES['imagem']['error'] == 0){
     }
 }
 
-// --- Monta o SQL ---
 $sql = "UPDATE clientes SET cliente = '$nome', cidade = '$cidade', estado = '$estado'";
 
 if($imagem_nome){
@@ -33,7 +32,6 @@ if($imagem_nome){
 
 $sql .= " WHERE id = '$id'";
 
-// --- Executa ---
 if(mysqli_query($conexao, $sql)){
     echo "<br><h2>Cliente alterado com sucesso!</h2>";
     echo "<a href='?pg=clientes-admin'>Voltar</a>";

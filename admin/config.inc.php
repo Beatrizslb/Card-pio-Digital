@@ -1,5 +1,4 @@
 <?php
-// Configuração do banco de dados
 $dbHost = 'localhost';
 $dbUsername = 'root';
 $dbPassword = '';

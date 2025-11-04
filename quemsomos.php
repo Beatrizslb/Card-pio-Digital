@@ -3,7 +3,6 @@
     <div class="quem-somos-imagem">
       <img src="assets/img/logo.jpg" alt="Espetinho Sabor Sertanejo">
     </div>
-
     <div class="quem-somos-texto">
       <h2>Quem Somos</h2>
       <p>

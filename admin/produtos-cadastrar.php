@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $categoria = $_POST['categoria'];
     $imagem = null;
 
-    // Caminho da subpasta específica de produtos
     $pasta = 'uploads/produtos/';
 
     // Upload da imagem
@@ -16,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nomeArquivo = basename($_FILES['imagem']['name']);
         $extensao = strtolower(pathinfo($nomeArquivo, PATHINFO_EXTENSION));
 
-        // Gera um nome único para evitar conflitos
         $novoNome = uniqid('produto_', true) . '.' . $extensao;
         $caminhoCompleto = $pasta . $novoNome;
 
@@ -28,7 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 mkdir($pasta, 0777, true);
             }
 
-            // Faz o upload
             if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminhoCompleto)) {
                 $imagem = $caminhoCompleto;
             } else {
@@ -39,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // Inserção no banco
     $sql = "INSERT INTO produtos (nome, descricao, preco, categoria, imagem) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param("ssdss", $nome, $descricao, $preco, $categoria, $imagem);

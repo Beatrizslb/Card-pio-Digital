@@ -38,7 +38,6 @@ header img {
     object-fit: cover;
 }
 
-/* MENU */
 nav {
     height: 85px;
     background-color: #fff;
@@ -218,7 +217,7 @@ p{
 
 
 /* RESPONSIVO */
-@media(max-width: 900px){
+@media(max-width: 620px){
     .contato-container {
         flex-direction: column;
         align-items: center;
@@ -231,17 +230,30 @@ p{
     .map-container {
         width: 100%;
     }
-}
-
-
-/* RESPONSIVO */
-@media(max-width: 900px){
-    .contato-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .endereco-info, .contato-info, .map-container {
         flex: 1 1 100%;
+    }
+
+    nav {
+        height: auto; 
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex; 
+        justify-content: space-around;
+        flex-wrap: wrap; 
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0 5px; 
+    }
+
+    nav ul li a {
+        padding: 8px 10px; 
+        font-size: 14px; 
+        white-space: nowrap; 
     }
 }

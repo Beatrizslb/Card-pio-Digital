@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="assets/css/global.css">
 <nav>
     <ul>
         <li><a href="index.php">Home</a></li>

@@ -22,10 +22,10 @@
 .quem-somos-imagem img {
   width: 320px;
   height: 320px;
-  border-radius: 50%; /* 🔥 torna a imagem redonda */
+  border-radius: 50%; 
   object-fit: cover;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border: 4px solid #fff; /* borda elegante branca */
+  border: 4px solid #fff;
 }
 
 .quem-somos-texto {
@@ -44,21 +44,4 @@
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 15px;
-}
-
-@media (max-width: 800px) {
-  .quem-somos-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .quem-somos-imagem img {
-    width: 240px;
-    height: 240px;
-  }
-
-  .quem-somos-texto {
-    flex: 1 1 100%;
-    text-align: justify;
-  }
 }
